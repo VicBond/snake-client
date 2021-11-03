@@ -9,6 +9,7 @@ const connect = function() {
   const name = "OPP";
   conn.setEncoding("utf8");
   
+
   conn.on("data", (data) => {
     console.log("server says:", data);
   });
@@ -16,26 +17,18 @@ const connect = function() {
   conn.on("connect", () => {
     // code that does something when the connection is first established
     console.log(`Name: ${name}`);
-    // setTimeout(function() {
-    //   conn.write("Move: down");
-    // }, 50);
-    // setTimeout(function() {
-    //   conn.write("Move: left");
-    // }, 50);
-    // setInterval(function () {
-    //   conn.write("Move: up");
-    // }, 50);
-    // conn.write("Move: left");
-    // conn.write("Move: down");
+    console.log(`Server Says: `,'successfully connected to the snake server');
+  
   });
   // interpret incoming data as text
-  // stdin.setEncoding('utf8');
+
 
   conn.on("event name", () => {
     // code that does something
-    // conn.on('Name: Sneaky');
    
+    
   });
+   
 
   // stdin.on('data', (input) => {
   //   conn.write(`${name}: ${input}`);
